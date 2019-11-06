@@ -1,0 +1,49 @@
+<html>
+<head>
+<style>
+.blueColor {
+    background-color:lightblue;
+}
+.redColor
+{
+      background-color:red;
+}
+</style>
+</head>
+<body>
+<button id="show">Show</button>
+<button id="hide">Hide</button>
+<button id="toggle">Toggle</button>
+<div>I am the div</div>
+<button class="blue">Blue</button>
+<button class="red">Red</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#toggle").click(function(){
+    $("div").toggle();
+  });
+
+  $("#hide").click(function(){
+    $("div").hide();
+  });
+
+
+  $("#show").click(function(){
+    $("div").show();
+  });
+
+
+  $(".blue").click(function(){
+      $("div").removeClass("redColor");
+    $("div").addClass("blueColor");
+  });
+
+  $(".red").click(function(){
+      $("div").removeClass("blueColor");
+    $("div").addClass("redColor");
+  });
+});
+</script>
+</body>
+</html>
